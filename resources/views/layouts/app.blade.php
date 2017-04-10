@@ -55,7 +55,7 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
 
-                         <li><a href="{{ url('/welcomeugly') }}">Home</a></li>
+                         <li><a href="{{ url('/guest') }}">Home</a></li>
                 <li><a href="{{ route('register') }}">Restaurants</a></li>
                 </ul>
                       

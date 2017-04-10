@@ -7,7 +7,7 @@
 <h1> My Profile Information </h1>
 
 <div class="col" style="float:right">
-<a href="#" class="btn btn-info btn-lg" role="button">Change Yo Password <i class="fa fa-lock" aria-hidden="true"></i> </a>
+<a href="{{ url('/update') }}"  class="btn btn-info btn-lg" role="button">Change Yo Password <i class="fa fa-lock" aria-hidden="true"></i> </a>
 
 </div>
 

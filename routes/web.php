@@ -34,8 +34,24 @@ Route::get('/myprofile', function () {
 Route::get('/adminhome', function () {
     return view('pages.adminhome');
 });
+Route::get('/update', function () {
+    return view('pages.update');
+
+});
 Route::get('/adminpanel', function () {
     return view('pages.adminpanel');
+
 });
+Route::get('/guest', function () {
+    return view('pages.guest');
+
+});
+Route::get('/food', function () {
+    return view('pages.resturant');
+
+});
+
+
+
 
 
