@@ -24,7 +24,7 @@
 
 
 @else 
-<h1> Have fun reviewing the resturants <i class="fa fa-heart-o" aria-hidden="true"></i>
+<h1> Have fun and happy reviewing <i class="fa fa-heart-o" aria-hidden="true"></i>
  </h1>
 
 <h1> Welcome  {{ Auth::user()->username }}! </h1>

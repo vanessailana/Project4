@@ -34,5 +34,8 @@ Route::get('/myprofile', function () {
 Route::get('/adminhome', function () {
     return view('pages.adminhome');
 });
+Route::get('/adminpanel', function () {
+    return view('pages.adminpanel');
+});
 
 
