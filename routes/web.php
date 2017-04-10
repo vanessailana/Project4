@@ -30,3 +30,9 @@ Route::get('/myprofile', function () {
     return view('pages.profile');
 });
 
+
+Route::get('/adminhome', function () {
+    return view('pages.adminhome');
+});
+
+

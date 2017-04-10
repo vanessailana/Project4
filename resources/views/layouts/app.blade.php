@@ -50,28 +50,37 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-left">
 
                         <!-- Authentication Links -->
                         @if (Auth::guest())
+
                          <li><a href="{{ url('/welcomeugly') }}">Home</a></li>
                 <li><a href="{{ route('register') }}">Restaurants</a></li>
+                </ul>
+                      
+
+                    <ul class="nav navbar-nav navbar-right">
+
                             <li><a href="{{ route('login') }}">Login</a></li>
 
                             <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
+                            </ul>
+                        @elseif(Auth::user()->is_admin=='1')
 
 
-                <li><a href="{{ url('/welcomeugly') }}">Home</a></li>
+                        <li><a href="{{ url('/adminhome') }}">Home</a></li>
                 <li><a href="{{ route('register') }}">Restaurants</a></li>
-                <li><a href="{{ route('register') }}">My Reviews</a></li>
-                <li><a href="{{ url('/myprofile') }}">My Profile</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->username }} <span class="caret"></span>
+                <li><a href="{{ route('register') }}">Admin Panel</a></li>
+                </ul>
+                
+                            
                                 </a>
 
-                                <ul class="dropdown-menu" role="menu">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                              
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
@@ -82,6 +91,56 @@
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
+                                    </li>
+                               
+                            </li>
+                       
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+                    @else
+                   
+
+                   
+                        <li><a href="{{ url('/welcomeugly') }}">Home</a></li>
+                <li><a href="{{ route('register') }}">Restaurants</a></li>
+                <li><a href="{{ route('register') }}">My Reviews</a></li>
+                 <li><a href="{{ url('/myprofile') }}">My Profile</a></li>
+                </ul>
+                
+                            
+                                </a>
+
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                              
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                               
+                            </li>
+                       
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
                                     </li>
                                 </ul>
                             </li>
