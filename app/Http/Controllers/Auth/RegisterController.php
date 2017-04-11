@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use DB;
+use App\Http\Requests;
 
 class RegisterController extends Controller
 {
@@ -55,6 +57,8 @@ class RegisterController extends Controller
         ]);
     }
 
+
+
     /**
      * Create a new user instance after a valid registration.
      *
@@ -67,7 +71,17 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'username' => $data['username'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => ($data['password']),
         ]);
     }
+
+    
+
+ 
+
+    
+
+    //edit method say if we want to change our password
+    //
+   
 }

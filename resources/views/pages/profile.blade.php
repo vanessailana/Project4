@@ -7,7 +7,7 @@
 <h1> My Profile Information </h1>
 
 <div class="col" style="float:right">
-<a href="{{ url('/update') }}"  class="btn btn-info btn-lg" role="button">Change Yo Password <i class="fa fa-lock" aria-hidden="true"></i> </a>
+<a href="{{ url('/update')}}" class="btn btn-info btn-lg" role="button">Change Yo Password <i class="fa fa-lock" aria-hidden="true"></i> </a>
 
 </div>
 
@@ -28,8 +28,7 @@
    <h2> <b> I joined </br> </h2>
 
   <h2>  {{ Auth::user()->created_at }}  </h2>
- 
- </div>
+
 
 
  
