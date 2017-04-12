@@ -10,7 +10,7 @@ Auth::routes();
 
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('pages.guest');
 });
 Route::get('/welcomeugly', function () {
     return view('pages.welcomeugly');
