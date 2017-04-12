@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -25,4 +26,15 @@ class HomeController extends Controller
     {
         return view('pages.welcomeugly');
     }
+
+   
+    public function show($id)
+    {
+       $post = User::all();
+
+       return $post;
+    }
+
+
+
 }

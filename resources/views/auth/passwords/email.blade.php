@@ -9,7 +9,6 @@
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
-                        <h1> <kbd> Basically, you will be receiving a link to change your password. Because Laravel Does Password Resets under the hood. Yay To get the link in order to change your password go to your log files and a link will appear,  I am serious. </kbd> </h1>
                             {{ session('status') }}
                         </div>
                     @endif

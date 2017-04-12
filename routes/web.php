@@ -7,7 +7,8 @@ use App\User;
 
 
 Auth::routes();
-Route::get('/home', 'HomeController@index');
+
+
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -29,9 +30,7 @@ Route::get('/adminpanel', function () {
 Route::get('/guest', function () {
     return view('pages.guest');
 });
-Route::get('/food', function () {
-    return view('pages.resturant');
-});
+
 Route::get('/email', function () {
     return view('auth.passwords.email');
 });
@@ -41,20 +40,29 @@ Route::get('password/reset(array)');
 
 
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
 Route::get('/home', 'HomeController@index');
 
 
-Route::post('/meow{id}', 'UpdatePasswordController@update');
+
+
+Route::post('user/meow{id}', 'UpdatePasswordController@update');
+
+
+
+Route::get('/food', function () {
+    return view('pages.resturant');
+});
+
+Route::get('admin/rest', 'ResturantController@store');
 
 //redirect after update
 Route::get('/yay', function () {
     return view('pages.success');
 });
+
+Route::get('food/yayfood', function () {
+    return view('pages.success_resturant');
+});
+
 
 

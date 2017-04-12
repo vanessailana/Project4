@@ -7,7 +7,7 @@
 
    @include('layouts.app')
    
- <form class="form-horizontal" role="form" method="POST" action="{{ url('/meow') . Auth::user()->id }}">
+ <form class="form-horizontal" role="form" method="POST" action="{{ url('user/meow') . Auth::user()->id }}">
                         {{ csrf_field() }}
 
    <center>
