@@ -28,13 +28,7 @@ class HomeController extends Controller
     }
 
    
-    public function show($id)
-    {
-       $post = User::all();
-
-       return $post;
-    }
-
+ 
 
 
 }

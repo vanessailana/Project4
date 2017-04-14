@@ -77,7 +77,12 @@ class RegisterController extends Controller
 
     
 
- 
+         public function show()
+        {
+            $user = User::all();
+
+            return view('pages.user')->with($tasks);
+        }
 
     
 

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Http\Requests;
 use Redirect;
+use View;
 
 class ResturantController extends Controller
 {
@@ -39,6 +40,9 @@ class ResturantController extends Controller
 
 
  }
+
+
+}
 
 }
 

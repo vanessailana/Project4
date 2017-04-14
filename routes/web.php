@@ -63,6 +63,14 @@ Route::get('/yay', function () {
 Route::get('food/yayfood', function () {
     return view('pages.success_resturant');
 });
+Route::get('admin/users', function () {
+    return view('pages.users');
+});
+Route::get('/foodinfo', function () {
+    return view('pages.resturant_info');
+});
+
+Route::get('/la', 'HomeController@show');
 
 
 
