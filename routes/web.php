@@ -67,6 +67,10 @@ Route::get('food/yayfood', function () {
 Route::get('/foodinfo', function () {
     return view('pages.resturant_info');
 });
+Route::get('/bestplaces', function () {
+    return view('pages.details');
+});
+
 
 Route::get('/la', 'HomeController@show');
 
@@ -77,6 +81,12 @@ Route::get('/test{id}','UserController@update');
 
 
 Route::get('/detail','ResturantController@showDetail');
+
+
+
+Route::get('/info{id}','ResturantController@details');
+
+
 
 
 

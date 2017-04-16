@@ -10,6 +10,7 @@ use DB;
 use App\Http\Requests;
 use Redirect;
 use View;
+use Illuminate\Support\Facades\Input;
 
 class ResturantController extends Controller
 {
@@ -42,18 +43,35 @@ class ResturantController extends Controller
  }
 
  //show the components served at the resturant 
+ ////simply resturant name 
 
 public function showDetail(){
    
-    $food=DB::table('restaurants')->pluck('name');
-    
+      $food = Restaurant::all();
 
-    //getting admin status 
-
+   
         
    return view('pages.details',  compact('food'));
 
  }
+
+//giving the specfic details of a resturant, when you press
+//the see  more button
+ public  function details($id) {
+
+
+  $rest=Restaurant::all()->where('rest_id',$id);
+
+ 
+ return  view('pages.resturant_info',  compact('rest'));
+
+   
+
+  
+    
+ }
+
+
 
 
 }

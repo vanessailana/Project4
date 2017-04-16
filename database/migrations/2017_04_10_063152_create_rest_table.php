@@ -14,7 +14,7 @@ class CreateRestTable extends Migration
     public function up()
     {
         Schema::create('restaurants', function (Blueprint $table) {
-            $table->increments('resturant_id')->unique();
+            $table->increments('rest_id');
             $table->string('name');
             $table->string('street_address');
             $table->string('city');

@@ -70,7 +70,7 @@
 
         
                         <li><a href="{{ url('/adminhome') }}">Home</a></li>
-                <li><a href="{{ route('register') }}">Restaurants</a></li>
+                <li><a href="{{ url('/detail') }}">Restaurants</a></li>
                 <li><a href="{{ url('/adminpanel') }}">Admin Panel</a></li>
                 </ul>
                 
