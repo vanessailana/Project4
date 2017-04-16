@@ -41,8 +41,21 @@ class ResturantController extends Controller
 
  }
 
+ //show the components served at the resturant 
+
+public function showDetail(){
+   
+    $food=DB::table('restaurants')->pluck('name');
+    
+
+    //getting admin status 
+
+        
+   return view('pages.details',  compact('food'));
+
+ }
+
 
 }
 
-}
 

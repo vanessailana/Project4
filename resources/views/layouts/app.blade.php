@@ -56,7 +56,7 @@
                         @if (Auth::guest())
 
                          <li><a href="{{ url('/guest') }}">Home</a></li>
-                <li><a href="{{ route('register') }}">Restaurants</a></li>
+                <li><a href="{{ url('/detail')}}">Restaurants</a></li>
                 </ul>
                       
 
@@ -109,7 +109,7 @@
 
                    
                         <li><a href="{{ url('/welcomeugly') }}">Home</a></li>
-                <li><a href="{{ route('register') }}">Restaurants</a></li>
+                <li><a href="{{ url('/detail') }}">Restaurants</a></li>
                 <li><a href="{{ route('register') }}">My Reviews</a></li>
                  <li><a href="{{ url('/myprofile') }}">My Profile</a></li>
                 </ul>
