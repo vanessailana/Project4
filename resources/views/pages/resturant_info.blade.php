@@ -2,6 +2,36 @@
 
 <div class="container">
 
+
+@if(Auth::user()->is_admin=='0')
+
+
+
+<h1> Restaurant Information  
+
+
+<a href="#" style="float:right" class="btn btn-success btn-lg" role="button"> Give Me a Review! <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
+
+
+
+</h1>
+
+
+
+@elseif(Auth::user()->is_admin=='1')
+
+
+<h1> Restaurant Information</h1> 
+
+
+@else
+
+<h1> Restaurant Information</h1> 
+
+
+
+@endif
+
 <center>
 
 
@@ -41,6 +71,9 @@
   </table>
 
         @endforeach
+
+
+
 
 
 
