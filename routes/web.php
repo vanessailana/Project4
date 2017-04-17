@@ -84,9 +84,8 @@ Route::get('/detail','ResturantController@showDetail');
 
 
 
+
 Route::get('/info{id}','ResturantController@details');
-
-
 
 
 

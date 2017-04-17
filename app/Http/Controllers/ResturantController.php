@@ -72,6 +72,58 @@ public function showDetail(){
  }
 
 
+  protected function change(Request $request, $id) {
+    
+  
+   
+  $user = Restaurant::all()->where('rest_id',$id);;
+
+    $name = $request->input('change');
+
+   //street_address
+    $name1 = $request->input('change1');
+
+
+   //city
+    $name2 = $request->input('change2');
+
+
+
+   //state
+    $name3 = $request->input('change3');
+
+
+    //zipcode
+    $name4 = $request->input('change4');
+
+
+
+    //website
+    $name5 = $request->input('change5');
+
+  DB::table('restaurants')
+            ->where('rest_id', $id)
+            ->update(['name' => $name,'street_address'=> $name1, 'city' => $name2, 'state' => $name3, 'zipcode' => $name4 ,'website'=> $name5 ]);;
+
+
+
+ return  view('pages.update_info',  compact('user'));
+
+  
+
+  
+ 
+}
+
+public function test(){
+
+  $test=Restaurant::find(2)->user();
+
+  return $test;
+}
+
+
+
 
 
 }
