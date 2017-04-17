@@ -2,18 +2,24 @@
 
 <div class="container">
 
+<div class="container">
 
-
-        <div class="container">
-
-        @foreach($rest as $rest)
+  @foreach($rest as $rest)
 
             
 @if(Auth::guest())
 
-<h1> <center>Welcome here some information on the following Resturant
+<div class="jumbotron">
+<div class="alert alert-success"><h1> <center>Welcome here IS  some information on the following Resturant </div>
 
-</center> </h1>
+</center>
+
+
+</div>
+
+
+
+</h1>
 
 
 @elseif(Auth::user()->is_admin=='1')
@@ -30,8 +36,9 @@
 <a href="#" style="float:right" class="btn btn-primary btn-lg" role="button"> Add Menu Items <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
 
 
-<a href="#" style="float:right" class="btn btn-success btn-lg" role="button"> Add Operating Hours <i class="fa fa-pencil" aria-hidden="true"></i></a>
 
+
+<a href="{{ url('/times')}}" style="float:right" class="btn btn-success btn-lg" role="button"> Add Operating Hours <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
 <p></p>
 
 </div>
@@ -42,9 +49,11 @@
 
 
 @endif
+
+
     <tbody>
       <tr>
-      <h1><td><h1> <kbd> Name of Restaruant </kbd> </h1><h1> {{$rest->name}} </h1></td>
+      <h1><td><h1> <kbd> Name of Restaruant </kbd> </h1><h1> {{$rest->name}} </h1></td>   
        
       </tr>
       <tr>
@@ -54,7 +63,7 @@
       {{$rest->id}}
      
       <tr>
-       <h1><td><h1> <kbd> City </kbd> </h1><h1> </h1></td>
+       <h1><td><h1> <kbd> City </kbd> </h1><h1>{{$rest->city}} </h1></td>
       </tr>
 
        <tr>
@@ -71,9 +80,42 @@
       </tr>
   </table>
 
+
         @endforeach
+     
+
+  <h1> <kbd> Operating Times  </kbd> </h1>
 
 
+        @foreach ($users as $users)
+
+        
+      <h1> Monday {{$users->Monday}} </h1>
+
+      <h1> Tuesday {{$users->Tuesday}}  </h1>
+
+
+      <h1> Wednesday {{$users->Wednesday}}  </h1>
+
+
+
+      <h1> Thursday {{$users->Thursday}}  </h1>
+
+
+     
+      <h1> Friday {{$users->Friday}}  </h1>
+
+
+
+      <h1> Saturday {{$users->Saturday}}  </h1>
+
+
+
+      <h1> Sunday {{$users->Sunday}}  </h1>
+ 
+ 
+
+         @endforeach
 
 
 

@@ -88,6 +88,34 @@ Route::get('/detail','ResturantController@showDetail');
 Route::get('/info{id}','ResturantController@details');
 
 
+Route::get('/fuck','OperatingTimes@test');
+
+
+
+Route::get('/i','ResturantController@storetimes');
+
+
+Route::get('/times', function () {
+    return view('pages.times');
+});
+
+
+
+Route::get('/done', function () {
+    return view('pages.successoperating');
+});
+
+
+
+
+Route::get('/i{id}','ResturantController@combine');
+
+
+
+
+
+
+
 
 
 

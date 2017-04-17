@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Restaurant;
+use App\Times;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
@@ -62,13 +63,29 @@ public function showDetail(){
 
   $rest=Restaurant::all()->where('rest_id',$id);
 
- 
- return  view('pages.resturant_info',  compact('rest'));
+
+    $users = DB::table('times')
+            ->join('restaurants', 'rest_id', '=', 'times.restu_id')->get();
+
+  
+ return  view('pages.resturant_info',  compact('rest','users'));
 
    
 
   
     
+ }
+
+ //joining the operatings database.
+ //
+
+ public function combine($id) {
+
+    $users = DB::table('times')
+            ->join('restaurants', 'rest_id', '=', 'times.restu_id');
+
+
+      return view('pages.resturant_info',  compact('users'));
  }
 
 
@@ -115,12 +132,31 @@ public function showDetail(){
  
 }
 
-public function test(){
 
-  $test=Restaurant::find(2)->user();
+ public function storetimes(Request $request) {
+  
+        $u = Times::create([
+      'Monday'  => $request->input('Monday'),
+      'Tuesday' => $request->input('Tuesday'),
+      'Wednesday' => $request->input('Wednesday'),
+      'Thursday' => $request->input('Thursday'),
+      'Friday' => $request->input('Friday'),
+      'Saturday' => $request->input('Saturday'),
+      'Sunday' => $request->input('Sunday')
 
-  return $test;
-}
+
+
+
+     
+   ]);
+
+ return view('pages.successoperating');
+
+
+
+
+
+ }
 
 
 
