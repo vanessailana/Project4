@@ -7,6 +7,14 @@
       
  <form class="form-horizontal" role="form" method="" action="{{ url('/i') }}">
 
+<div class="container">
+ <center>
+<h1> Please Fill in the Times That The Restaurant is Opened at</h1>
+<h2> If You are closed on a Specfic Day, Just Type Closed So <kbd> NO </kbd> Customer is confused </h2>
+
+</center>
+
+</div>
 
                         {{ csrf_field() }}
 
@@ -128,9 +136,9 @@
                         
                <center>
 
-         <button type="submit" class="btn btn-primary btn-large">
+         <h1><button type="submit" class="btn btn-primary btn-lg">
                                     Add Operating Times </i>
-                                </button>
+                                </button> </h1>
 
 
                                 </center>
