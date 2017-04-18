@@ -15,10 +15,11 @@ class CreateMenuItemsTable extends Migration
     {
         //
      Schema::create('food', function (Blueprint $table) {
+        $table->increments('id');
         $table->string('rest_name');
         $table->string('item');
         $table->string('description');
-        $table->integer('price');
+        $table->string('price');
  
 
  

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Restaurant;
 use App\Times;
+use App\Food;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
@@ -63,9 +64,16 @@ public function showDetail(){
 
   $rest=Restaurant::all()->where('rest_id',$id);
 
-
+     //operating times.
     $users = DB::table('times')
             ->join('restaurants', 'rest_id', '=', 'times.restu_id')->get();
+
+    //now determine certain menu items with restaurants
+    //
+    
+
+  
+
 
   
  return  view('pages.resturant_info',  compact('rest','users'));
@@ -154,6 +162,49 @@ public function showDetail(){
 
 
 
+
+
+ }
+
+ public function insert(Request $request) {
+
+   $name = $request->input('item');
+
+   //street_address
+    $name1 = $request->input('description');
+
+    $name2 = $request->input('price');
+
+
+    $name3 = $request->input('rest_name');
+
+
+
+
+DB::table('food')->insert([
+    ['item' => $name, 'description' => $name1,'price'=>$name2
+    ,'rest_name' => $name3]
+ 
+]);
+
+
+     
+
+   return view('pages.successfood');
+
+
+ }
+
+//combine restable with menu table
+ public function show($name) {
+
+  $food = DB::table('food')
+            ->join('restaurants', 'name', '=', 'food.rest_name')->get();
+
+
+
+  
+ return  view('pages.menu',  compact('food'));
 
 
  }

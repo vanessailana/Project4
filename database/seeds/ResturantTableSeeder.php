@@ -13,7 +13,7 @@ class ResturantTableSeeder extends Seeder
     {
         
        DB::table('restaurants')->insert([
-            'name' => 'Food'.str_random(10),
+            'name' => 'Chipotle',
             'street_address'=>str_random(10),
             'city'=>'NeverLand',
             'state' => str_random(10),

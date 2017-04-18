@@ -112,6 +112,41 @@ Route::get('/i{id}','ResturantController@combine');
 
 
 
+Route::get('/good', function () {
+    return view('pages.successfood');
+});
+
+
+
+Route::get('/add_menu_items', function () {
+    return view('pages.add_menu');
+});
+
+
+
+
+
+
+
+Route::get('/o','ResturantController@insert');
+
+
+
+
+Route::get('/toeat{name}','ResturantController@show');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

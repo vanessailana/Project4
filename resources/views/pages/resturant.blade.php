@@ -105,7 +105,7 @@
                <center>
 
          <button type="submit" class="btn btn-primary">
-                                    Update!  <i class="fa fa-refresh" aria-hidden="true"></i>
+                                    Add To Database <i class="fa fa-refresh" aria-hidden="true"></i>
                                 </button>
 
 

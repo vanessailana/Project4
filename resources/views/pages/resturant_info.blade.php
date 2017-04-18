@@ -31,9 +31,9 @@
 <h1> Info about the following Resturant </h1>
 
 
-<a href="{{ url('/change'. $rest->rest_id)}}" style="float:right" class="btn btn-success btn-lg" role="button"> Edit Resturant <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
+<a href="{{ url('/change'. $rest->name)}}" style="float:right" class="btn btn-success btn-lg" role="button"> Edit Resturant <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
 ;
-<a href="#" style="float:right" class="btn btn-primary btn-lg" role="button"> Add Menu Items <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
+<a href="{{ url('/add_menu_items')}}"style="float:right" class="btn btn-primary btn-lg" role="button"> Add Menu Items <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
 
 
 
@@ -42,18 +42,36 @@
 <p></p>
 
 </div>
-@else 
+@else
+
+<p></p>
 
 <a href="#" style="float:right" class="btn btn-success btn-lg" role="button"> Give Me a Review! <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
 
 
 
-@endif
 
+
+
+@endif
+<center>
+<a href="{{ url('/toeat'. $rest->name)}}" style="float:center" class="btn btn-primary btn-lg btn-block" role="button"> View Menu Items 
+<i class="fa fa-cutlery" aria-hidden="true"></i></a></h1>
+
+</center>
+
+<p></p>
+<center>
+
+<p></p>
+
+</center>
+<p></p>
 
     <tbody>
       <tr>
-      <h1><td><h1> <kbd> Name of Restaruant </kbd> </h1><h1> {{$rest->name}} </h1></td>   
+      <p></p>
+      <h1><td><h1> <p></p><kbd> Name of Restaruant </kbd> </h1><h1> {{$rest->name}} </h1></td>   
        
       </tr>
       <tr>
@@ -116,6 +134,9 @@
  
 
          @endforeach
+
+       
+
 
 
 
