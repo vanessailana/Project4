@@ -249,7 +249,7 @@ public function edit(Request $request,$id) {
 //in the front
 public function all($id) {
 
-  $food= Restaurant::all();
+  $food= Restaurant::all()->where('rest_id',$id);
 
 return  view('pages.updaterest',  compact('food'));
 
