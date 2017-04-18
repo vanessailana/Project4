@@ -4,17 +4,16 @@
 
 <div class="container">
 
+<div class="jumbotron">
 
 
+<h1> Menu Items, Whats to Eat ? </h1>
+ </div>
 
   @foreach($food as $food)
 
 
-<div class="jumbotron">
 
- <h1> Menu Items For The {{$food->rest_name}} </h1> 
-
- </div>
 
    
     <tbody>

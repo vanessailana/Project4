@@ -8,12 +8,16 @@
  <form class="form-horizontal" role="form" method="" action="{{ url('/o') }}">
 
 <div class="container">
- <center>
-<h1> Add A MENU ITEM </h1>
+
+<center>
+
+ <h1> Add A MENU ITEM FOR THE RESTAURANT NAME YOU WANT </h1>
+
 
 </center>
 
 </div>
+
 
                         {{ csrf_field() }}
 

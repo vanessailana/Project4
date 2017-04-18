@@ -210,9 +210,59 @@ DB::table('food')->insert([
  }
 
 
+public function edit(Request $request,$id) {
+
+  $name = $request->input('name');
+
+  
+
+  $name1 = $request->input('street_address');
+
+
+
+  $name2 = $request->input('city');
+
+
+  $name3 = $request->input('state');
+
+
+  $name4 = $request->input('zipcode');
+
+
+
+  $name5 = $request->input('website');
+
+
+  $test= Restaurant::where('rest_id', $id)
+          ->update(['name' => $name],['street_address' => $name1],
+            ['city' => $name2],['state' => $name3],['zipcode' => $name4],
+           ['website' => $name5] );
+
+           
+        return view('pages.success_change_rest');
+         
+  
+
+
+}
+//helper method since iam passing a shit ton of variables
+//in the front
+public function all($id) {
+
+  $food= Restaurant::all();
+
+return  view('pages.updaterest',  compact('food'));
 
 
 
 }
+
+ 
+ }
+
+
+
+
+
 
 

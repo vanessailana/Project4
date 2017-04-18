@@ -19,7 +19,9 @@
  </h1>
 
 </center>
+<center>
  <h1> As part of being an admin you get to judge food </h1>
+ </center>
  <center>
 
 <iframe width="900" height="345" src="https://www.youtube.com/embed/cx-foylAP40?autoplay=1">

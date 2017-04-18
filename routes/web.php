@@ -125,15 +125,42 @@ Route::get('/add_menu_items', function () {
 
 
 
-
-
-
 Route::get('/o','ResturantController@insert');
 
 
 
 
 Route::get('/toeat{name}','ResturantController@show');
+
+
+
+Route::get('/food{id}','ResturantController@all');
+
+Route::get('/edit{id}','ResturantController@edit');
+
+
+
+
+
+Route::get('/done', function () {
+    return view('pages.success_change_rest');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

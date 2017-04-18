@@ -6,16 +6,18 @@
 <center>
 
 
-<div class="container">
 
 <h1>All Resturants on This Website </h1>
 
 @if(Auth::guest())
 
-<div class="alert alert-info">
+<div class="jumbotron">
 
+<h1>
 Press the See More Button, If You want more information on this place 
+</h1>
 </div>
+
 
 @elseif(Auth::user()->is_admin=='1')
 
@@ -31,7 +33,7 @@ Press the See More Button, To view more details about the resturant. Also you ca
 
 <div class="alert alert-info">
 <div class="jumbotron">
- Press the See More button to View more information on the resturant and give reviews </div> 
+ <h2>Press the See More button to View more information on the resturant and give reviews </h2></div> 
 </div>
 
 @endif

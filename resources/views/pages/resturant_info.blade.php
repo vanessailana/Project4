@@ -31,7 +31,7 @@
 <h1> Info about the following Resturant </h1>
 
 
-<a href="{{ url('/change'. $rest->name)}}" style="float:right" class="btn btn-success btn-lg" role="button"> Edit Resturant <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
+<a href="{{ url('/food'. $rest->rest_id)}}" style="float:right" class="btn btn-success btn-lg" role="button"> Edit Resturant <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
 ;
 <a href="{{ url('/add_menu_items')}}"style="float:right" class="btn btn-primary btn-lg" role="button"> Add Menu Items <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
 
@@ -42,9 +42,7 @@
 <p></p>
 
 </div>
-@else
-
-<p></p>
+@else 
 
 <a href="#" style="float:right" class="btn btn-success btn-lg" role="button"> Give Me a Review! <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
 
