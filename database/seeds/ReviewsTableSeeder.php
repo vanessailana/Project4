@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
+use Faker\Factory as Faker;
 
 class ReviewsTableSeeder extends Seeder
 {
@@ -8,14 +10,17 @@ class ReviewsTableSeeder extends Seeder
 
     public function run()
     {
+
+        $faker=Faker::create();
+
        DB::table('review')->insert([
-            'rest_name'=>'Chipotle',
-            'rest_city' => 'NeverLand',
-            'useremail'=> 'matt@gmail.com',
-            'username'=> 'donut1234',
-            'ratingvalue' => '2',
-            'tagline'=> 'yum',
-            'body'=> 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry st',
+            'rest_name'=> $faker->name,
+            'rest_city' =>$faker->city,
+            'useremail'=> $faker->email,
+            'username'=>  $faker->username,
+            'ratingvalue' => rand(1,5),
+            'tagline'=> $faker->word,
+            'body'=> $faker->paragraph,
         ]);
     }
 }

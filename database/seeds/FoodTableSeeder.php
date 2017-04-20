@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
 
 class FoodTableSeeder extends Seeder
 {
@@ -11,11 +12,12 @@ class FoodTableSeeder extends Seeder
      */
     public function run()
     {
-       DB::table('food')->insert([
-            'rest_name' => 'Chipotle',
+           $faker=Faker::create();
+            DB::table('food')->insert([
+            'rest_name' => $faker->company,
             'item'=>'Donut',
-            'description'=>'yummy',
-            'price' => '$100.00',
+            'description'=>$faker->text,
+            'price' => '$'.rand(1,100),
            
         ]);
     }

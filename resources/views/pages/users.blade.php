@@ -40,10 +40,16 @@
 <a href="{{ url('/change' . $users->name)}}" onclick="alert('You have just changed this user's status)" class="btn btn-primary btn-lg" role="button"> Promote {{$users->name}} </a>
 
 
+@else 
 
 
 
-@endif
+<a href="{{ url('/demote' . $users->name)}}" onclick="alert('You have just changed this user's status)" class="btn btn-danger btn-lg" role="button"> Demote  {{$users->name}} </a>
+
+
+
+
+@endif 
 
 
 

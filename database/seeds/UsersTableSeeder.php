@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
 
 class UsersTableSeeder extends Seeder
 {
@@ -17,12 +18,13 @@ class UsersTableSeeder extends Seeder
     // this will randomly generate either a regular user or an admin
     public function run()
     {
-      
+      $faker=Faker::create();
+
        DB::table('users')->insert([
-            'name' => 'matt',
-            'username'=>'donut1234',
+            'name' => $faker->name,
+            'username'=>$faker->username,
             'is_admin'=>rand(0,1),
-            'email' => 'matt'.'@gmail.com',
+            'email' => $faker->email,
             'password' => bcrypt('secret'),
         ]);
     }

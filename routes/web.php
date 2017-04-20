@@ -180,6 +180,9 @@ Route::get('/change{id}','UserController@changestatus');
 
 
 
+Route::get('/demote{id}','UserController@demote');
+
+
 
 
 

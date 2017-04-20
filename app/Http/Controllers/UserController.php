@@ -39,6 +39,26 @@ class UserController extends Controller
 }
 
 
+//change status for demotion
+//
+//
+
+
+public function demote($id) {
+
+     $users= User::all();
+
+    $update= DB::table('users')
+            ->where('name', $id)
+            ->update(['is_admin' => 0]);
+
+
+
+
+ return view('pages.users',  compact('users','update'));
+}
+
+
 
 
 }

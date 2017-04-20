@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
+use Faker\Provider\en_US\Company'
 
 class TimesTableSeeder extends Seeder
 {
@@ -11,6 +13,9 @@ class TimesTableSeeder extends Seeder
      */
     public function run()
     {
+
+    $faker=Faker::create();
+
      DB::table('operating_times')->insert([
             'Monday'=> '24 Hours',
             'Tuesday'=> '9am -1pm',
@@ -19,7 +24,7 @@ class TimesTableSeeder extends Seeder
             'Friday'=>'7am-6pm',
             'Saturday'=>'10am-10pm',
             'Sunday'=>'10am-10pm',
-            'restname'=>'Chipotle',
+            'restname'=>$faker->company,
 
 
            

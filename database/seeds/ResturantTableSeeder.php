@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Faker\Factory as Faker;
 class ResturantTableSeeder extends Seeder
 {
     /**
@@ -11,14 +11,14 @@ class ResturantTableSeeder extends Seeder
      */
     public function run()
     {
-        
+      $faker=Faker::create();
        DB::table('restaurants')->insert([
-            'name' => 'Chipotle',
-            'street_address'=>str_random(10),
-            'city'=>'NeverLand',
-            'state' => str_random(10),
+            'name' => $faker->company,
+            'street_address'=>$faker->streetAddress,
+            'city'=>$faker->city,
+            'state' => $faker->state,
             'zipcode'=> '90210',
-            'website' => url(str_random(10)) .'.com',
+            'website' =>$faker->url,
         ]);
     }
 }
