@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Restaurant;
+use App\Review;
 use App\Times;
 use App\Food;
 use App\Http\Controllers\Controller;
@@ -70,13 +71,21 @@ public function showDetail(){
 
     //now determine certain menu items with restaurants
     //
-    
 
+//review part 
+$review=Review::all()->where('rest_name',$id);
+
+
+ $yum = DB::table('review')
+            ->join('restaurants', 'name', '=', 'review.rest_name')->get();
   
 
 
   
- return  view('pages.resturant_info',  compact('rest','users'));
+
+
+  
+ return  view('pages.resturant_info',  compact('rest','users','review','yum'));
 
    
 
@@ -256,6 +265,12 @@ return  view('pages.updaterest',  compact('food'));
 
 
 }
+
+//helper method for the rest info page, so we are able to 
+////associate resturants to review 
+//
+//
+
 
  
  }

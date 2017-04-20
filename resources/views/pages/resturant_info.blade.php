@@ -10,7 +10,7 @@
 @if(Auth::guest())
 
 <div class="jumbotron">
-<div class="alert alert-success"><h1> <center>Welcome here IS  some information on the following Resturant </div>
+<div class="alert alert-success"><h1> <center>Welcome here IS  some information on <kbd> A </kbd> Resturant </div>
 
 </center>
 
@@ -128,12 +128,53 @@
 
 
       <h1> Sunday {{$users->Sunday}}  </h1>
+
+
  
  
 
          @endforeach
 
+<center>
+ <div class="jumbotron">
+
+ <h1> <kbd> reviews! </kbd> </h1>
+
+ </div>
+
+ </center>
+
+
+@foreach($yum as $yum)
+ 
+ <h1><kbd> Resturant Name </kbd> </h1>
+<h1> {{$yum->rest_name}} </h1>
+
+ <h1><kbd> Tagline </kbd> </h1>
+ <h1> {{$yum->tagline}} </h1>
+
+
+ <h1><kbd> Rating between 1-5 Stars. </kbd> </h1>
+
+ <h3>  1 is Terrible <i class="fa fa-frown-o" aria-hidden="true"></i>  </h3>
+      <h3> 5 is Happy and Its Yummy<i class="fa fa-smile-o" aria-hidden="true"></i> </h3>
+ </h3>
+ <h1> {{$yum->tagline}} </h1>
+
+
+
+
+ <h1><kbd> Body </kbd> </h1>
+ <h1> {{$yum->body}} </h1>
+
+
+ <h1><kbd> Who gave this review?</kbd> </h1>
+
+ <h1> {{$yum->useremail}} </h1>
        
+
+
+       @endforeach
 
 
 

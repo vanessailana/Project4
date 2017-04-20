@@ -162,6 +162,8 @@ Route::get('/yayreview', function () {
 
 
 
+Route::get('/test{id}','ResturantController@associatereview');
+
 
 
 
