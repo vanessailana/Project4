@@ -147,8 +147,9 @@
 
 @foreach($yum as $yum)
  
- <h1><kbd> Resturant Name </kbd> </h1>
-<h1> {{$yum->rest_name}} </h1>
+ <h1> Resturant Name </h1>
+ <h1> {{$yum->rest_name}} </h1>
+
 
  <h1><kbd> Tagline </kbd> </h1>
  <h1> {{$yum->tagline}} </h1>

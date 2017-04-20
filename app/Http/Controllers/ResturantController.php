@@ -73,7 +73,7 @@ public function showDetail(){
     //
 
 //review part 
-$review=Review::all()->where('rest_name',$id);
+
 
 
  $yum = DB::table('review')
@@ -85,7 +85,7 @@ $review=Review::all()->where('rest_name',$id);
 
 
   
- return  view('pages.resturant_info',  compact('rest','users','review','yum'));
+ return  view('pages.resturant_info',  compact('rest','users','yum'));
 
    
 
