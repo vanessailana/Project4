@@ -125,7 +125,7 @@ Route::get('/add_menu_items', function () {
 
 
 
-Route::get('/o','ResturantController@insert');
+Route::get('/o','ResturantController@review');
 
 
 
@@ -145,6 +145,25 @@ Route::get('/edit{id}','ResturantController@edit');
 Route::get('/done', function () {
     return view('pages.success_change_rest');
 });
+
+
+
+Route::get('/givereview', function () {
+    return view('pages.add_review');
+});
+
+
+
+Route::get('/hi','ReviewController@insertOpinion');
+
+Route::get('/yayreview', function () {
+    return view('pages.yayreview');
+});
+
+
+
+
+
 
 
 

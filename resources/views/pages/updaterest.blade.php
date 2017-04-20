@@ -47,7 +47,7 @@
                
 
                             <div class="col-md-6">
-                                <input id="street_address"  placeholder={{$food->street_address}}class="form-control" name="street_address">
+                                <input id="street_address"  placeholder="{{$food->street_address}}" class="form-control" name="street_address">
 
                                 @if ($errors->has('street_address'))
                                     <span class="help-block">

@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'matt',
             'username'=>str_random(10),
             'is_admin'=>rand(0,1),
-            'email' => str_random(10).'@gmail.com',
+            'email' => 'matt'.'@gmail.com',
             'password' => bcrypt('secret'),
         ]);
     }

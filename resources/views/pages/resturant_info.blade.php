@@ -44,7 +44,7 @@
 </div>
 @else 
 
-<a href="#" style="float:right" class="btn btn-success btn-lg" role="button"> Give Me a Review! <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
+<a href="{{ url('/givereview')}}" style="float:right" class="btn btn-success btn-lg" role="button"> Give Me a Review! <i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
 
 
 
