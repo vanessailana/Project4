@@ -92,6 +92,7 @@ Route::get('/fuck','OperatingTimes@test');
 
 
 
+
 Route::get('/i','ResturantController@storetimes');
 
 
@@ -171,6 +172,17 @@ Route::get('/test{id}','ResturantController@associatereview');
 
 //associating a user to a review
 Route::get('/associate{id}','ReviewController@myreviews');
+
+
+
+
+Route::get('/change{id}','UserController@changestatus');
+
+
+
+
+
+
 
 
 

@@ -147,20 +147,24 @@
 
 @foreach($yum as $yum)
  
- <h1> Resturant Name </h1>
+ <h1> <kbd>Resturant Name </kbd></h1>
  <h1> {{$yum->rest_name}} </h1>
 
 
  <h1><kbd> Tagline </kbd> </h1>
  <h1> {{$yum->tagline}} </h1>
-fgdfg
+
 
  <h1><kbd> Rating between 1-5 Stars. </kbd> </h1>
 
  <h3>  1 is Terrible <i class="fa fa-frown-o" aria-hidden="true"></i>  </h3>
       <h3> 5 is Happy and Its Yummy<i class="fa fa-smile-o" aria-hidden="true"></i> </h3>
  </h3>
- <h1> {{$yum->tagline}} </h1>
+
+ <h1><kbd> Resturant Rating Value</kbd> </h1>
+<h1> {{$yum->rest_name}} has a {{$yum->ratingvalue}} rating </h1>
+
+
 
 
 

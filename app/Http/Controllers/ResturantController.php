@@ -70,9 +70,7 @@ $yum = Review::all()->where('rest_name',$id);
 
 
      //operating times.
-    $users = DB::table('times')
-            ->join('restaurants', 'rest_id', '=', 'times.restu_id')->get();
-
+    $users=Times::all()->where('restname',$id);
  
 
 
@@ -147,6 +145,7 @@ $yum = Review::all()->where('rest_name',$id);
  public function storetimes(Request $request) {
   
         $u = Times::create([
+      'restname'  => $request->input('restname'),
       'Monday'  => $request->input('Monday'),
       'Tuesday' => $request->input('Tuesday'),
       'Wednesday' => $request->input('Wednesday'),

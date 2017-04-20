@@ -16,33 +16,30 @@ class UserController extends Controller
 {
     //show the users in the database
     //
-   public function show()
-    {
-      
-
-
-    $users=DB::table('users')->pluck('email');
-
-    //getting admin status 
-
-        
-   return view('pages.users',  compact('users'));
-    }
-
+   
 
   //we will be updating users by id. 
 
-    public function update($id) { 
+    public function changestatus($id) { 
  
-      DB::table('users')
-            ->where('id', $id)
+     $users= User::all();
+
+    $update= DB::table('users')
+            ->where('name', $id)
             ->update(['is_admin' => 1]);
 
+
+
+
+ return view('pages.users',  compact('users','update'));
 
 
         
 
 }
+
+
+
 
 }
 

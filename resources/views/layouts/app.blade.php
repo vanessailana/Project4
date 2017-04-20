@@ -110,7 +110,7 @@
                    
                         <li><a href="{{ url('/welcomeugly') }}">Home</a></li>
                 <li><a href="{{ url('/detail') }}">Restaurants</a></li>
-                <li><a href="{{ url('/associate' . Auth::user()->username) }}">My reviews</a></li>
+                <li><a href="{{ url('/associate' . Auth::user()->username) }}">My Reviews</a></li>
                  <li><a href="{{ url('/myprofile') }}">My Profile</a></li>
                 </ul>
                 

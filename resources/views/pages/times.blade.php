@@ -18,6 +18,21 @@
 
                         {{ csrf_field() }}
 
+<div class="form-group{{ $errors->has('restname') ? ' has-error' : '' }}">
+     <label for="restname" class="col-md-4 control-label">Resturant Name</label>
+
+                            <div class="col-md-6">
+                                <input id="restname" maxlength="255" type="text" class="form-control" name="restname" required>
+
+                                @if ($errors->has('restname'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('restname') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+
         <div class="form-group{{ $errors->has('Monday') ? ' has-error' : '' }}">
      <label for="name" class="col-md-4 control-label">Monday</label>
 

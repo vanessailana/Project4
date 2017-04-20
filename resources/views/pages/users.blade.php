@@ -9,45 +9,47 @@
 
 <div class="container">
 
-<h1> Each user has a unique email </h1>
+<div class="jumbotron">
 
-<h1> Users <kbd> Are Listed By Email </kbd> <i class="fa fa-users" aria-hidden="true"></i> </h1>
+
+<h1> User Accounts Are  <kbd> Are Listed By Email </kbd> <i class="fa fa-users" aria-hidden="true"></i> </h1>
+
+
+
+<h1> So you have the power to promote a user to an admin like yourself {{Auth::user()->name}} 
+</h1>
+
+
+</div>
+</div>
+
+
+
+
+
 
 @foreach($users as $users)
 
-
-
-<h1> <strong> Email </strong> {{ $users }} 
-
-
-
-<p></p>
+<h1> {{$users->email}} </h1>
 
 
 
-</h1>
+  @if($users->is_admin=='0')
+
+
+<a href="{{ url('/change' . $users->name)}}" class="btn btn-primary btn-lg" role="button"> Promote {{$users->name}} </a>
+
+
+
+
+
+@endif
+
 
 
 
 @endforeach
 
-
-</div>
-
-
-</table>
-
-</center>
-
-<center>
-
-
-</center>
-
-
-</div>
-
-</div>
 
 
 

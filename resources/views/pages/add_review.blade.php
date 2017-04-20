@@ -11,7 +11,7 @@
 
 <center>
 
- <h1> Give a Review  </h1>
+ <h1> Give a Review  <i class="fa fa-star" aria-hidden="true"></i> </h1>
 
 
 </center>
