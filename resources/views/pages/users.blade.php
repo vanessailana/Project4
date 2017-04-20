@@ -37,7 +37,7 @@
   @if($users->is_admin=='0')
 
 
-<a href="{{ url('/change' . $users->name)}}" class="btn btn-primary btn-lg" role="button"> Promote {{$users->name}} </a>
+<a href="{{ url('/change' . $users->name)}}" onclick="alert('You have just changed this user's status)" class="btn btn-primary btn-lg" role="button"> Promote {{$users->name}} </a>
 
 
 
