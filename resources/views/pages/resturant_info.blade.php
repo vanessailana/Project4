@@ -153,7 +153,7 @@
 
  <h1><kbd> Tagline </kbd> </h1>
  <h1> {{$yum->tagline}} </h1>
-
+fgdfg
 
  <h1><kbd> Rating between 1-5 Stars. </kbd> </h1>
 

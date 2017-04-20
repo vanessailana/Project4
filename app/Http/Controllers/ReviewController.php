@@ -24,9 +24,11 @@ class ReviewController extends Controller
      $u = Review::create([
       'rest_name'  => $request->input('rest_name'),
       'useremail' => $request->input('useremail'),
+      'username' => $request->input('username'),
       'ratingvalue' => $request->input('rating_value'),
       'tagline' => $request->input('tagline'),
       'body' => $request->input('body'),
+      'rest_city' => $request->input('city'),
 
 
 
@@ -35,6 +37,20 @@ class ReviewController extends Controller
 
 
    return view('pages.yayreview');
+
+
+ }
+
+//see who reviewed what, for what resturant
+ protected function myreviews($id) {
+   
+
+$test=Review::all()->where('username',$id);
+
+
+ return  view('pages.myreviews',  compact('test'));
+
+
 
 
  }

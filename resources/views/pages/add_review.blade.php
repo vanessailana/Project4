@@ -36,6 +36,32 @@
                         </div>
 
 
+    <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+     <label for="username" class="col-md-4 control-label"> Enter Your <kbd> Unique and Cool  Username </kbd></label>
+
+                            <div class="col-md-6">
+                                <input id="username" maxlength="255" type="text" class="form-control" name="username" required>
+
+                                @if ($errors->has('username'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('username') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+   <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
+     <label for="username" class="col-md-4 control-label">City  </label>
+
+                            <div class="col-md-6">
+                                <input id="city" maxlength="255" type="text" style="width:100px" class="form-control" name="city" required>
+
+                                @if ($errors->has('city'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('city') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
                           {{ csrf_field() }}
 
         <div class="form-group{{ $errors->has('rest_name') ? ' has-error' : '' }}">
@@ -49,13 +75,17 @@
                                         <strong>{{ $errors->first('rest_name') }}</strong>
                                     </span>
                                 @endif
+
                             </div>
+
+
+
+
                         </div>
 
-
+  <label for="inputsm" class="col-md-4 control-label">Rating Value Please Enter an Integer Between 1 and 5. 1 Being terrible and 5 being Yummy</label>
         <div class="form-group{{ $errors->has('rating_value') ? ' has-error' : '' }}">
-     <label for="inputsm" class="col-md-4 control-label">Rating Value Please Enter an Integer Between 1 and 5</label>
-
+     
 
 
                             <div class="col-md-6">
@@ -94,7 +124,7 @@
 
 
                             <div class="col-md-6">
-                                 <input id="body" maxlength="255" type="text" class="form-control" style="width:200px height:200px" name="body" required>
+                                 <input id="body" maxlength="255" type="text" class="form-control" style="width:400px; height:200px" name="body" required>
 
                                 @if ($errors->has('body'))
                                     <span class="help-block">

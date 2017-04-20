@@ -160,9 +160,18 @@ Route::get('/yayreview', function () {
     return view('pages.yayreview');
 });
 
+Route::get('/myreviews', function () {
+    return view('pages.myreviews');
+});
 
 
+//associating a review to a resturante
 Route::get('/test{id}','ResturantController@associatereview');
+
+
+//associating a user to a review
+Route::get('/associate{id}','ReviewController@myreviews');
+
 
 
 

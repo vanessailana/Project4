@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Times extends Model
 {
     protected $fillable = [
-        'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday',
+        'Monday','restname','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday',
     ];
 
 
-    protected $table = 'times';
+    protected $table = 'operating_times';
 
 }

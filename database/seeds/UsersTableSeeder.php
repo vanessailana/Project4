@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
       
        DB::table('users')->insert([
             'name' => 'matt',
-            'username'=>str_random(10),
+            'username'=>'donut1234',
             'is_admin'=>rand(0,1),
             'email' => 'matt'.'@gmail.com',
             'password' => bcrypt('secret'),

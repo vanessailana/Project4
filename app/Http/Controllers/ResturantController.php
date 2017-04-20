@@ -63,28 +63,22 @@ public function showDetail(){
  public  function details($id) {
 
 
-  $rest=Restaurant::all()->where('rest_id',$id);
+$rest=Restaurant::all()->where('name',$id);
+
+
+$yum = Review::all()->where('rest_name',$id);
+
 
      //operating times.
     $users = DB::table('times')
             ->join('restaurants', 'rest_id', '=', 'times.restu_id')->get();
 
-    //now determine certain menu items with restaurants
-    //
-
-//review part 
+ 
 
 
 
- $yum = DB::table('review')
-            ->join('restaurants', 'name', '=', 'review.rest_name')->get();
-  
 
 
-  
-
-
-  
  return  view('pages.resturant_info',  compact('rest','users','yum'));
 
    

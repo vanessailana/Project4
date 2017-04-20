@@ -33,7 +33,7 @@ Press the See More Button, To view more details about the resturant. Also you ca
 
 <div class="alert alert-info">
 <div class="jumbotron">
- <h2>Press the See More button to View more information on the resturant and give reviews </h2></div> 
+ <h2>Press the See More button to View more information on the resturant and give review </h2></div> 
 </div>
 
 @endif
@@ -46,7 +46,7 @@ Press the See More Button, To view more details about the resturant. Also you ca
 
 
 
-<a href="{{ url('/info'. $food->rest_id)}}" class="btn btn-success btn-lg" role="button"> Read More Information on the Resturant <i class="fa fa-bullseye" aria-hidden="true"></i></a>
+<a href="{{ url('/info'. $food->name)}}" class="btn btn-success btn-lg" role="button"> Read More Information on the Resturant <i class="fa fa-bullseye" aria-hidden="true"></i></a>
 
 
 @endforeach
