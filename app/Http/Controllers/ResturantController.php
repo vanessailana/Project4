@@ -200,9 +200,7 @@ DB::table('food')->insert([
 //combine restable with menu table
  public function show($name) {
 
-  $food = DB::table('food')
-            ->join('restaurants', 'name', '=', 'food.rest_name')->get();
-
+ $food=Food::all()->where('rest_name',$name);
 
 
   

@@ -5,7 +5,7 @@
 
   
       
- <form class="form-horizontal" role="form" method="" action="{{ url('/o') }}">
+ <form class="form-horizontal" role="form" method="" action="{{ url('/eat') }}">
 
 <div class="container">
 

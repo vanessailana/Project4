@@ -129,6 +129,9 @@ Route::get('/add_menu_items', function () {
 Route::get('/o','ResturantController@review');
 
 
+Route::get('/eat','ResturantController@insert');
+
+
 
 
 Route::get('/toeat{name}','ResturantController@show');

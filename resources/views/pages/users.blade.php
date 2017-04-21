@@ -37,14 +37,14 @@
   @if($users->is_admin=='0')
 
 
-<a href="{{ url('/change' . $users->name)}}" onclick="alert('You have just changed this user's status)" class="btn btn-primary btn-lg" role="button"> Promote {{$users->name}} </a>
+<a href="{{ url('/change' . $users->name)}}" onclick="alert('You just promoted this user')"  class="btn btn-primary btn-lg" role="button"> Promote {{$users->name}} </a>
 
 
 @else 
 
 
 
-<a href="{{ url('/demote' . $users->name)}}" onclick="alert('You have just changed this user's status)" class="btn btn-danger btn-lg" role="button"> Demote  {{$users->name}} </a>
+<a href="{{ url('/demote' . $users->name)}}" onclick="alert('You just demoted this user')" class="btn btn-danger btn-lg" role="button"> Demote  {{$users->name}} </a>
 
 
 

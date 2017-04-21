@@ -20,7 +20,7 @@ class ReviewsTableSeeder extends Seeder
             'username'=>  $faker->username,
             'ratingvalue' => rand(1,5),
             'tagline'=> $faker->word,
-            'body'=> $faker->paragraph,
+            'body'=> $faker->text,
         ]);
     }
 }
